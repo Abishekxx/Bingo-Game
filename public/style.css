@@ -1,0 +1,112 @@
+/* ==== Flowing RGB Gradient Background ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: white;
+  background: linear-gradient(270deg, #ff4d4d, #4d4dff, #4dff4d, #ffff4d, #ff4d4d);
+  background-size: 1000% 1000%;
+  animation: flowingRGB 20s linear infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==== Title ==== */
+h1 {
+  margin-top: 40px;
+  font-size: 3em;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ==== Name Entry ==== */
+#name-entry {
+  margin: 20px auto;
+}
+
+#nameInput {
+  padding: 12px;
+  font-size: 18px;
+  width: 220px;
+  border: none;
+  border-radius: 8px;
+}
+
+#joinBtn {
+  padding: 12px 24px;
+  font-size: 18px;
+  margin-left: 12px;
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#joinBtn:hover {
+  background-color: #ddd;
+}
+
+/* ==== Info ==== */
+#info {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ==== Bingo Grid ==== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 70px);
+  gap: 14px;
+  justify-content: center;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ==== Cell Styling ==== */
+.cell {
+  width: 70px;
+  height: 70px;
+  background: #ffffff;
+  color: #000;
+  border-radius: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 70px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cell:hover {
+  transform: scale(1.12);
+  background: #ffe082;
+}
+
+.cell.marked {
+  background: #00e676;
+  color: white;
+  pointer-events: none;
+  transform: scale(1);
+  box-shadow: 0 0 15px #00e676aa;
+}
+
+/* ==== Flowing RGB Animation ==== */
+@keyframes flowingRGB {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

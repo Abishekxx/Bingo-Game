@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bingo Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Real-Time Bingo</h1>
+
+  <div id="name-entry">
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button id="joinBtn">Join Game</button>
+  </div>
+
+  <p id="info" style="display: none;">Waiting for another player...</p>
+
+  <div id="grid" class="grid" style="display: none;"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
